@@ -1,4 +1,6 @@
-﻿using ExchangeThings.Web.Filters;
+﻿using ExchangeThings.Web.Database;
+using ExchangeThings.Web.Entities;
+using ExchangeThings.Web.Filters;
 using ExchangeThings.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -10,6 +12,12 @@ namespace ExchangeThings.Web.Controllers
 {
     public class ExchangesController : Controller
     {
+        private readonly ExchangesDbContext _dbContext;
+        public ExchangesController(ExchangesDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
 
         [ServiceFilter(typeof(MyCustomActionFilter))]
         public IActionResult Show(string id)
@@ -26,15 +34,16 @@ namespace ExchangeThings.Web.Controllers
         [HttpPost]
         public IActionResult Add(ItemModel item)
         {
-            //TODO add to database
-
-            var viewModel = new AddNewItemConfirmationViewModel
+    
+            var entity = new ItemEntity
             {
-                Id = 1,
-                Name = item.Name
+                Name = item.Name,
+                Description = item.Description,
+                IsVisible = item.IsVisible,
             };
+            _dbContext.Items.Add(entity);
+            _dbContext.SaveChanges();
 
-            //return View("AddConfirmation", viewModel);
 
             return RedirectToAction("AddConfirmation");
         }

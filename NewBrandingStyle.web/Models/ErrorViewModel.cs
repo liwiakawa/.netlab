@@ -1,6 +1,6 @@
 using System;
 
-namespace NewBrandingStyle.web.Models
+namespace NewBrandingStyle.Web.Models
 {
     public class ErrorViewModel
     {
