@@ -148,3 +148,4 @@ C:\Users\oliwi\Desktop\.netlab\NewBrandingStyle.Web\bin\Debug\netcoreapp3.1\runt
 C:\Users\oliwi\Desktop\.netlab\NewBrandingStyle.Web\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\oliwi\Desktop\.netlab\NewBrandingStyle.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\oliwi\Desktop\.netlab\NewBrandingStyle.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\oliwi\Desktop\.netlab\NewBrandingStyle.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\LatestItem\Index.cshtml.g.cs
